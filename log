@@ -171,3 +171,9 @@ Wed 12 Apr 2023 11:51:34 PM UTC:
  tests:  5|4
 total_score: 30/70
 afde02d
+Wed 12 Apr 2023 11:58:43 PM UTC: 
+ hashmap.c | 15 +++++++++++++++
+ 1 file changed, 15 insertions(+)
+ tests:  6|4
+total_score: 30/70
+cd58faf
