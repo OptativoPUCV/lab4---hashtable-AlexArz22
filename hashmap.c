@@ -40,13 +40,13 @@ int is_equal(void* key1, void* key2){
 
 
 void insertMap(HashMap * map, char * key, void * value) {
-  long keyA=hash(key, map->capacity);
-  if(map->buckets[keyA]==NULL){
-    map->buckets[keyA]->key=key;
-    map->buckets[keyA]->value=value;
+  long posicion=hash(key, map->capacity);
+  if(map->buckets[posicion]==NULL){
+    map->buckets[posicion]->key=key;
+    map->buckets[posicion]->value=value;
   }
   else{
-    for(int i=(keyA+1)%map->capacity; i!=keyA%map->capacity ; i=(i+1) % map->capacity){
+    for(int i=(posicion+1)%map->capacity; i!=posicion%map->capacity ; i=(i+1) % map->capacity){
       if(map->buckets[i]==NULL){
         strcpy(map->buckets[i]->key,key);
         map->buckets[i]->value=value;
