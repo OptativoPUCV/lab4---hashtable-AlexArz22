@@ -50,18 +50,16 @@ void insertMap(HashMap * map, char * key, void * value) {
   else{
     
     for(long i=(posicion+1)%map->capacity; i!=posicion%map->capacity ; i=(i+1) % map->capacity)  {
-      
-      
-      
-      //if(par==map->buckets[i]) return;
-      if(map->buckets[i]==NULL){
-        map->buckets[i]=par;  
-      }
-      else{
+      if(map->buckets[i]!=NULL){
         if(is_equal(map->buckets[i]->key, key)==1){
           return;
         }
       }
+      
+      if(map->buckets[i]==NULL){
+        map->buckets[i]=par;  
+      }
+
     }
   }
   map->size++;
