@@ -42,8 +42,8 @@ int is_equal(void* key1, void* key2){
 void insertMap(HashMap * map, char * key, void * value) {
   long posicion=hash(key, map->capacity);
   if(map->buckets[posicion]==NULL){
-    strcpy(map->buckets[posicion]->key,key);
-    //map->buckets[posicion]->key=key;
+    //strcpy(map->buckets[posicion]->key,key);
+    map->buckets[posicion]->key=key;
     map->buckets[posicion]->value=value;
   }
   else{
