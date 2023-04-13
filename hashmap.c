@@ -4,7 +4,7 @@
 #include <math.h>
 #include <ctype.h>
 #include "hashmap.h"
-
+#include <stdbool.h>
 
 typedef struct HashMap HashMap;
 int enlarge_called=0;
@@ -101,7 +101,10 @@ Pair * searchMap(HashMap * map,  char * key) {
       return map->buckets[posicion];
     }
     else{
-      while(map->buckets[posicion]!=NULL){
+      while(true){
+        if(map->buckets[posicion]==NULL){
+          return NULL;
+        }
         if(is_equal(map->buckets[posicion]->key, key)==1){
           map->current=posicion;
           return map->buckets[posicion];
