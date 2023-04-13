@@ -80,7 +80,7 @@ void enlarge(HashMap * map) {
   map->buckets=(Pair **) realloc(map->buckets,sizeof(Pair **)* map->capacity);
   map->size=0;
 
-  for(int i=0; i<map->capacity/2; i++){
+  for(int i=0; i<(map->capacity/2); i++){
     if(arreglo[i]!=NULL){
       insertMap(map, arreglo[i]->key, arreglo[i]->value);
     }
