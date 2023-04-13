@@ -374,3 +374,16 @@ Thu 13 Apr 2023 12:52:20 AM UTC:
  tests:  15|2
 total_score: 50/70
 117ff59
+Thu 13 Apr 2023 01:10:24 AM UTC: 
+ hashmap.c | 11 +++++++++++
+ 1 file changed, 11 insertions(+)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:85:57: error: expected ‘;’ before ‘}’ token
+   85 |       insertMap(map, arreglo[i]->key, arreglo[i]->value)
+      |                                                         ^
+      |                                                         ;
+   86 |     }
+      |     ~                                                    
+Compilation failed
+43772fc
