@@ -73,7 +73,7 @@ void insertMap(HashMap * map, char * key, void * value) {
 void enlarge(HashMap * map) {
     enlarge_called = 1; //no borrar (testing purposes)
 
-  Pair** arreglo=map->buckets;
+ /* Pair** arreglo=map->buckets;
   map->capacity=map->capacity*2;
 
   map->buckets=(Pair **) realloc(map->buckets,sizeof(Pair **) * map->capacity);
@@ -85,7 +85,7 @@ void enlarge(HashMap * map) {
       insertMap(map, arreglo[i]->key, arreglo[i]->value);
     }
   }
-  
+  */
 }
 
 
