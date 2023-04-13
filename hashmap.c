@@ -71,7 +71,7 @@ void insertMap(HashMap * map, char * key, void * value) {
 }
 
 void enlarge(HashMap * map) {
-  //  enlarge_called = 1; //no borrar (testing purposes)
+    enlarge_called = 1; //no borrar (testing purposes)
 
   Pair** arreglo=map->buckets;
   map->capacity=map->capacity*2;
@@ -82,7 +82,7 @@ void enlarge(HashMap * map) {
   for(int i=0; i<(map->capacity/2); i++){
     map->buckets[i]=NULL;
     if(arreglo[i]!=NULL){
-      insertMap(map, arreglo[i]->key, arreglo[i]->value);
+      //insertMap(map, arreglo[i]->key, arreglo[i]->value);
     }
   }
   
