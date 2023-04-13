@@ -139,9 +139,9 @@ Pair * firstMap(HashMap * map) {
 
 Pair * nextMap(HashMap * map) {
 
-  if(map->buckets[map->current]!=NULL){
-    if(map->buckets[map->current]->key!=NULL){
-      return map->buckets[map->current];
+  if(map->buckets[(map->current+1)%map->capacity]!=NULL){
+    if(map->buckets[(map->current+1)%map->capacity]->key!=NULL){
+      return map->buckets[(map->current+1)%map->capacity];
     }
   }
   for(long i=(map->current+1)%map->capacity; i!=map->current; i=(i+1)%map->capacity){
