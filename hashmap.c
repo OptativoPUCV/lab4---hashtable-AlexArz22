@@ -152,6 +152,9 @@ Pair * nextMap(HashMap * map) {
         return map->buckets[i];
       }
     }
+    else{
+      return NULL;
+    }
   }
   
   return NULL;
