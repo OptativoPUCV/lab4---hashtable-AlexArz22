@@ -110,7 +110,7 @@ Pair * searchMap(HashMap * map,  char * key) {
           return NULL;
         }
         if(is_equal(map->buckets[posicion]->key, key)==1){
-          map->current=posicion-1;
+          map->current=posicion;
           return map->buckets[posicion];
         }
         posicion=(posicion+1)%map->capacity;
@@ -139,9 +139,9 @@ Pair * firstMap(HashMap * map) {
 
 Pair * nextMap(HashMap * map) {
 
-  if(map->buckets[map->current]!=NULL){
-    if(map->buckets[map->current]->key!=NULL){
-      return map->buckets[map->current];
+  if(map->buckets[map->current+1]!=NULL){
+    if(map->buckets[map->current+1]->key!=NULL){
+      return map->buckets[map->current+1];
     }
   }
   for(long i=(map->current+1)%map->capacity; i!=map->current; i=(i+1)%map->capacity){
