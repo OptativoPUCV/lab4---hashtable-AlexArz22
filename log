@@ -272,3 +272,9 @@ Thu 13 Apr 2023 12:34:46 AM UTC:
  1 file changed, 4 insertions(+), 4 deletions(-)
  tests:  0|0
 3b5cbd1
+Thu 13 Apr 2023 12:35:05 AM UTC: 
+ hashmap.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+ tests:  13|2
+total_score: 50/70
+953cd4a
