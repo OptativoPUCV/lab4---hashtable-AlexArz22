@@ -100,18 +100,19 @@ Pair * searchMap(HashMap * map,  char * key) {
       map->current=posicion;
       return map->buckets[posicion];
     }
-  }
-  else{
-    while(map->buckets[posicion]!=NULL){
-      if(is_equal(map->buckets[posicion]->key, key)==1){
-        map->current=posicion;
-        return map->buckets[posicion];
+    else{
+      while(map->buckets[posicion]!=NULL){
+        if(is_equal(map->buckets[posicion]->key, key)==1){
+          map->current=posicion;
+          return map->buckets[posicion];
+        }
+        posicion++;
       }
-      posicion++;
     }
   }
-  
-  //return NULL;
+  else{
+    return NULL;
+  }
 }
 
 Pair * firstMap(HashMap * map) {
