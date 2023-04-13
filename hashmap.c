@@ -106,13 +106,14 @@ Pair * searchMap(HashMap * map,  char * key) {
           map->current=posicion;
           return map->buckets[posicion];
         }
-        posicion++;
+        posicion=(posicion+1)%map->capacity;
       }
     }
   }
   else{
     return NULL;
   }
+  
 }
 
 Pair * firstMap(HashMap * map) {
